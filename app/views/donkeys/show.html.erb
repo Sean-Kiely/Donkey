@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @donkey.name %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @donkey.owner %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @donkey.dob %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @donkey.breed %>
+</p>
+
+<p>
+  <strong>Med cond:</strong>
+  <%= @donkey.med_cond %>
+</p>
+
+<%= link_to 'Edit', edit_donkey_path(@donkey) %> |
+<%= link_to 'Back', donkeys_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Donkeys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Owner</th>
+      <th>Dob</th>
+      <th>Breed</th>
+      <th>Med cond</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donkeys.each do |donkey| %>
+      <tr>
+        <td><%= donkey.name %></td>
+        <td><%= donkey.owner %></td>
+        <td><%= donkey.dob %></td>
+        <td><%= donkey.breed %></td>
+        <td><%= donkey.med_cond %></td>
+        <td><%= link_to 'Show', donkey %></td>
+        <td><%= link_to 'Edit', edit_donkey_path(donkey) %></td>
+        <td><%= link_to 'Destroy', donkey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Donkey', new_donkey_path %>
