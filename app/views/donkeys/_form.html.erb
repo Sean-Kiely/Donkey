@@ -27,14 +27,19 @@
     <%= f.label :breed_id %><br>
     <%= f.collection_select :breed_id, @breeds, :id, :breed_name, {prompt: "Select Breed"}%>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :med_cond, "Special Needs" %><br>
-    <%= f.text_field :med_cond %>
+    <%= f.text_field :med_cond, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :avatar %><br>
     <%= f.file_field :avatar %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :in_daycare, "Checked In" %><br>
+    <%= f.check_box :in_daycare %>
   </div>
 
   <div class="actions">

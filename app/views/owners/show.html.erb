@@ -16,9 +16,32 @@
 </p>
 
 <p>
-  <strong>Evac waiver:</strong>
+  <strong>Evac Waiver:</strong>
   <%= @owner.evac_waiver %>
 </p>
 
-<%= link_to 'Edit', edit_owner_path(@owner) %> |
-<%= link_to 'Back', owners_path %>
+<p>
+  <%= link_to 'Edit', edit_owner_path(@owner) %> |
+  <%= link_to 'Back', owners_path %>
+</p>
+
+<p>
+  <strong><%= @owner.first_name %> <%= @owner.last_name %>'s Donkeys:</strong>
+</p>
+
+<!-- new table of dogs for owner show -->
+<% @owner.donkey.each do |donkey| %>
+
+    <div class="col-xs-6 col-sm-4 col-md-3">
+
+      <div class="panel <%= donkey.in_daycare ? 'panel-success' : 'panel-default' %>">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= donkey.name.titleize %> <%= donkey.owner.try(:last_name) %></h3>
+        </div>
+        <div class="panel-body">
+          <%= image_tag donkey.avatar.url(:medium), class: 'img-rounded img-responsive' %>
+        </div>
+
+      </div>
+    </div>
+<%end%>

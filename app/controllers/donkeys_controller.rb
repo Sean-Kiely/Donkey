@@ -73,6 +73,6 @@ class DonkeysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def donkey_params
-      params.require(:donkey).permit(:name, :owner_id, :dob, :breed_id, :med_cond, :avatar)
+      params.require(:donkey).permit(:name, :owner_id, :dob, :breed_id, :med_cond, :avatar, :in_daycare)
     end
 end
