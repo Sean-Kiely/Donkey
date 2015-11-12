@@ -42,6 +42,8 @@ gem 'annotate'
 gem 'awesome_print'
 gem 'thin'
 gem 'stamp'
+gem "paperclip", "~> 4.3"
+gem 'font-awesome-rails'
 
 group :development do
   gem 'starter_generators'
