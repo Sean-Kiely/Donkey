@@ -25,5 +25,11 @@
   <%= @donkey.med_cond %>
 </p>
 
+<p>
+<%= image_tag @donkey.avatar.url(:medium) %>
+
+</p>
+
+
 <%= link_to 'Edit', edit_donkey_path(@donkey) %> |
 <%= link_to 'Back', donkeys_path %>
