@@ -2,12 +2,12 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @donkey.name %>
+  <%= @donkey.name.titleize %>
 </p>
 
 <p>
   <strong>Owner:</strong>
-  <%= @donkey.owner %>
+  <%= @donkey.owner.last_name %>
 </p>
 
 <p>
@@ -17,11 +17,11 @@
 
 <p>
   <strong>Breed:</strong>
-  <%= @donkey.breed %>
+  <%= @donkey.breed.breed_name %>
 </p>
 
 <p>
-  <strong>Med cond:</strong>
+  <strong>Special Needs:</strong>
   <%= @donkey.med_cond %>
 </p>
 

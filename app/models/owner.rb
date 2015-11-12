@@ -15,4 +15,11 @@ class Owner < ActiveRecord::Base
   has_many :donkey
 
   validates :first_name, :last_name, :email, presence: true
+  #validates evac waiver boolean checkbox
+  validates :evac_waiver, inclusion: [true]
+
+def last_comma_first
+  "#{last_name}, #{first_name}"
+end
+
 end

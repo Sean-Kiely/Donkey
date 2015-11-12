@@ -15,10 +15,14 @@ class DonkeysController < ApplicationController
   # GET /donkeys/new
   def new
     @donkey = Donkey.new
+    @breeds = Breed.order("breed_name")
+    @owners = Owner.order("last_name")
   end
 
   # GET /donkeys/1/edit
   def edit
+    @breeds = Breed.order("breed_name")
+    @owners = Owner.order("last_name")
   end
 
   # POST /donkeys

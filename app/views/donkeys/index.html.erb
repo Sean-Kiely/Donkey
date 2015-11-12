@@ -17,10 +17,10 @@
   <tbody>
     <% @donkeys.each do |donkey| %>
       <tr>
-        <td><%= donkey.name %></td>
-        <td><%= donkey.owner %></td>
+        <td><%= donkey.name.titleize %></td>
+        <td><%= donkey.owner.try(:last_name) %></td>
         <td><%= donkey.dob %></td>
-        <td><%= donkey.breed %></td>
+        <td><%= donkey.breed.breed_name %></td>
         <td><%= donkey.med_cond %></td>
         <td><%= link_to 'Show', donkey %></td>
         <td><%= link_to 'Edit', edit_donkey_path(donkey) %></td>
