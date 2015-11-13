@@ -17,7 +17,9 @@ class Donkey < ActiveRecord::Base
   belongs_to :breed
 
   validates :name, :owner_id, presence: true
+  validates_uniqueness_of :name, :scope=> :owner_id
+  # validates :name, uniqueness: true, :scope=> :owner_id
 
-  has_attached_file :avatar, styles: { medium: "300x300#", thumb: "100x100#" }, default_url: ":style_missing.jpg"
+  has_attached_file :avatar, styles: { medium: "300x300#", thumb: "100x100#" }, default_url: ":style_missing.gif"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 end

@@ -7,7 +7,7 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @donkey.owner.last_comma_first %>
+  <%= link_to @donkey.owner.last_comma_first, owner_path(@donkey.owner) %>
 </p>
 
 <p>
